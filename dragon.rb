@@ -1,4 +1,4 @@
-# pet dragon
+# pet dragon - this in an interactive text based game about a pet dragon.
 
 class Dragon
 	def initialize
@@ -24,7 +24,7 @@ class Dragon
 	end
 
 	def play
-		puts "You take #{@name} out to play. When you throw the ball, instead of fetching it, #{@gender2} aims #{@gender} fiery breath at the ball and incererates it."
+		puts "You take #{@name} out to play. When you throw the ball, instead of fetching it, #{@gender2} aims #{@gender} fiery breath at the ball and incinerates it."
 		pass_time
 	end
 
@@ -45,7 +45,7 @@ class Dragon
 		if choice == 'ride along'
 			puts "You hold on tight as #{@name} takes off and flies you around the countryside. WEEEEEEEE."
 		elsif choice == 'leash'
-			puts "As #{@name} takes off, you realize your bodyweight will do little to harness #{@gender} great stength.
+			puts "As #{@name} takes off, you realize your bodyweight will do little to harness #{@gender} great strength.
            You are wildly pulled into the air, clinging tightly to the leash. This is not what you expected!"
 		end
 		pass_time

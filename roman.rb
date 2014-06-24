@@ -1,5 +1,5 @@
 =begin
-
+This commented part of the program was an exercise or two, but I decided to make this program more about roman numerals. see below
 puts 'Do you want me to sing a song?'
 song = gets.chomp.downcase
 if song == 'yes'
@@ -42,6 +42,7 @@ end
 
 =end
 
+# practice with recursion. making a factorial method
 class Integer
 	 def factorial
  		 if self < 0
@@ -55,7 +56,7 @@ class Integer
 end
 
 # roman numeral methods
-def old_school(num)
+def old_school(num) # this changes a number into roman numerals, not using the IV notation for 4
 	 m = 0  # 1000
 	 d = 0  # 500
 	 c = 0  # 100
@@ -99,7 +100,7 @@ def old_school(num)
 	'M'*m + 'D'*d + 'C'*c + 'L'*l + 'X'*x + 'V'*v + 'I'*i
 end
 
-def modern(num)
+def modern(num) # this changes a number to roman numerals with the special notation IV, IX...etc
 	 m = 0  # 1000
 	 d = 0  # 500
 	 c = 0  # 100
@@ -174,7 +175,7 @@ def modern(num)
 	'M'*m + 'D'*d + 'CD'*cd + 'CM'*cm + 'C'*c + 'L'*l + 'XL'*xl + 'XC'*xc + 'X'*x + 'V'*v + 'I'*i + 'IV'*iv + 'IX'*ix
 end
 
-# roman numerals to numbers
+# roman numerals to numbers within the String class, so it can be called with 'XIV'.to_num
 class String
 	def to_num
 		 n = 0
@@ -215,7 +216,7 @@ class String
 	end
 end
 
-# make the number to modern roman numerals method a true method
+# make the number to modern roman numerals method a true method on integers.
 class Integer
 	 def to_roman
  		 m = 0  # 1000

@@ -1,4 +1,4 @@
-# benfords law
+# benfords law. this is very incomplete. please don't judge
 
 require 'yaml'
 
