@@ -67,32 +67,32 @@ def old_school(num) # this changes a number into roman numerals, not using the I
 	 num2 = num
 	 if num >= 1000
  		 m = num/1000
- 		 num = num - 1000*m
+ 		 num -= 1000*m
  	end
 
 	 if num >= 500
  		 d = 1
- 		 num = num - 500
+ 		 num -= 500
  	end
 
 	 if num >= 100
  		 c = num/100
- 		 num = num - 100*c
+ 		 num -= 100*c
  	end
 
 	 if num >= 50
  		 l = 1
- 		 num = num - 50
+ 		 num -= 50
  	end
 
 	 if num >= 10
  		 x = num/10
- 		 num = num - 10*x
+ 		 num -= 10*x
  	end
 
 	 if num >= 5
  		 v = 1
- 		 num = num - 5
+ 		 num -= 5
  	end
 	 i = num
 
@@ -120,27 +120,27 @@ def modern(num) # this changes a number to roman numerals with the special notat
 
 	 if n >= 1000
  		 m = n/1000
- 		 n = n - 1000*m
+ 		 n -= 1000*m
  	end
 	 if n >= 500
  		 d = 1
- 		 n = n - 500
+ 		 n -= 500
  	end
 	 if n >= 100
  		 c = n/100
- 		 n = n - 100*c
+ 		 n -= 100*c
  	end
 	 if n >= 50
  		 l = 1
- 		 n = n - 50
+ 		 n -= 50
  	end
 	 if n >= 10
  		 x = n/10
- 		 n = n - 10*x
+ 		 n -= 10*x
  	end
 	 if n >= 5
  		 v = 1
- 		 n = n - 5
+ 		 n -= 5
  	end
 	 i = n
 
@@ -238,27 +238,27 @@ class Integer
 
  		 if n >= 1000
   			 m = n/1000
-  			 n = n - 1000*m
+  			 n  1000*m
   		end
  		 if n >= 500
   			 d = 1
-  			 n = n - 500
+  			 n -= 500
   		end
  		 if n >= 100
   			 c = n/100
-  			 n = n - 100*c
+  			 n -= 100*c
   		end
  		 if n >= 50
   			 l = 1
-  			 n = n - 50
+  			 n -= 50
   		end
  		 if n >= 10
   			 x = n/10
-  			 n = n - 10*x
+  			 n -= 10*x
   		end
  		 if n >= 5
   			 v = 1
-  			 n = n - 5
+  			 n -= 5
   		end
  		 i = n
 
@@ -343,58 +343,3 @@ def time_counter(_block_description, &block)
 	 running_time = Time.new - start_time
 	puts "#{block} took #{running_time} seconds."
 end
-
-# ---------------------------notes--------------------------------
-for k in 1..10 # includes 10
-	 for j in 1...50 # does not include 50
- 		 next if j%3 == 0  # skips to next element in range
- 		 puts j*k
- 	end
-end
-
-14.times do
-	 puts 'hi'
-end
-
-loop do
-	 # do some stuff over and over
-	 break if true
-end
-
-k=0
-loop {
-	 puts k.divmod(9)
-	 k +=1
-	 break if k > 100
-}
-
-# splat arguments. can pass as many people as you want.
-def greeting(word, *_people)
-		puts "#{word} #{person}"
-end
-
-def d_by_3?(n, like = false) # like is a default argument. could be passed or not
-	if like
-		puts "I like the number #{n}"
-	end
-	false
-	if n%3 == 0
-		 true
-	end
-end
-
-# conditional assignment operator
-number ||= 5  # assigns 5 to number only if number is not assigned alraady
-
-5.upto(15) { |x|; puts x }  # also .downto method... same as 5..15.each?
-
-# for debugging:
-[1, 2, 3].respond_to?(:to_s) # returns false if the method can be called on the object
-
-# the shovel!!
-
-array = [1, 2, 3, 4] << 5  #-> [1,2,3,4,5]
-
-# .select
-# .each_key
-# .each_value
